@@ -31,11 +31,11 @@
             <div class="setting-item">
                 <label>My Links:</label>
                 <div class="links-container">
-                    <a href="https://YOURWEBSITE.com" target="_blank" class="support-link">
+                    <a href="https://github.com/Julian-boops/lecztrans-app" target="_blank" class="support-link">
                         <i class="fas fa-globe"></i>
                         My Website
                     </a>
-                    <a href="https://github.com/YOURUSERNAME" target="_blank" class="support-link">
+                    <a href="https://github.com/Julian-boops" target="_blank" class="support-link">
                         <i class="fab fa-github"></i>
                         GitHub
                     </a>
@@ -69,10 +69,29 @@
         <!-- Tabs -->
         <div class="tabs">
             <button id="tabToLublin" class="tab-button active" onclick="showTab('toLublin')">
-                Do Lublina
+                Łęczna → Lublin
             </button>
             <button id="tabToLeczna" class="tab-button" onclick="showTab('toLeczna')">
-                Do Łęcznej
+                Lublin → Łęczna
+            </button>
+        </div>
+
+        <!-- Day Type Selector -->
+        <div class="day-types">
+            <button id="daySchool" class="day-type-btn active" onclick="setDayType('schoolDays')">
+                <i class="fas fa-school"></i> Dni nauki szkolnej
+            </button>
+            <button id="dayFree" class="day-type-btn" onclick="setDayType('freeDays')">
+                <i class="fas fa-umbrella-beach"></i> Dni wolne od nauki
+            </button>
+            <button id="daySaturday" class="day-type-btn" onclick="setDayType('saturday')">
+                <i class="fas fa-calendar-day"></i> Sobota
+            </button>
+            <button id="daySunday" class="day-type-btn" onclick="setDayType('sunday')">
+                <i class="fas fa-church"></i> Niedziela
+            </button>
+            <button id="dayHolidays" class="day-type-btn" onclick="setDayType('holidays')">
+                <i class="fas fa-star"></i> Święta
             </button>
         </div>
 

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Schedule Łęczna-Lublin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Side Panel -->
+    <div id="sidePanel" class="side-panel">
+        <div class="panel-header">
+            <h2>Ustawienia</h2>
+            <button class="close-btn" onclick="closeSidePanel()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="panel-content">
+            <!-- Language Toggle -->
+            <div class="setting-item">
+                <label>Język / Language:</label>
+                <div class="toggle-container">
+                    <button id="langPL" class="lang-btn active" onclick="setLanguage('pl')">PL</button>
+                    <button id="langEN" class="lang-btn" onclick="setLanguage('en')">EN</button>
+                </div>
+            </div>
+
+            <!-- My Links -->
+            <div class="setting-item">
+                <label>My Links:</label>
+                <div class="links-container">
+                    <a href="https://YOURWEBSITE.com" target="_blank" class="support-link">
+                        <i class="fas fa-globe"></i>
+                        My Website
+                    </a>
+                    <a href="https://github.com/YOURUSERNAME" target="_blank" class="support-link">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- App Info -->
+            <div class="app-info">
+                <p>Bus Schedule v1.0</p>
+                <p>Łęczna ↔ Lublin</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay for closing panel -->
+    <div id="overlay" class="overlay" onclick="closeSidePanel()"></div>
+
+    <!-- Main App -->
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <button class="menu-btn" onclick="openSidePanel()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-title">
+                <h1>🚌 Łęczna - Lublin</h1>
+                <div class="subtitle">Rozkład jazdy</div>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button id="tabToLublin" class="tab-button active" onclick="showTab('toLublin')">
+                Do Lublina
+            </button>
+            <button id="tabToLeczna" class="tab-button" onclick="showTab('toLeczna')">
+                Do Łęcznej
+            </button>
+        </div>
+
+        <!-- Schedule Content -->
+        <div id="toLublin" class="tab-content active">
+            <div id="scheduleToLublin" class="schedule"></div>
+        </div>
+        
+        <div id="toLeczna" class="tab-content">
+            <div id="scheduleToLeczna" class="schedule"></div>
+        </div>
+
+        <!-- Last Update -->
+        <div class="footer">
+            <div class="update-text" id="updateText">
+                Ostatnia aktualizacja: <span id="currentTime"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
